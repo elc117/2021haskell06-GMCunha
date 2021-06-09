@@ -24,7 +24,7 @@ contido c (x:xs) = c == x || contido c xs
 
 translate :: [(Float, Float)] -> [(Float, Float)]
 translate [] = []
-translate (x:xs) = (fst x + 2, snd x + 2):translate xs
+translate ((x1, x2):xs) = (x1 + 2, x2 + 2):translate xs
 
 countLongs :: [String] -> Int
 countLongs [] = 0
